@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-light-cyan text-dusk-blue;
+    /* Coastal Fuel style asks for NO gradients, NO box-shadows, NO textures. */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-condensed font-extrabold tracking-tighter text-jet-black uppercase;
+  }
+
+  /* Specific typography from Coastal Fuel */
+  .hero-headline {
+    @apply font-condensed font-extrabold uppercase tracking-tighter text-jet-black text-[clamp(4rem,10vw,5.5rem)] leading-[0.95];
+  }
+  
+  .section-headline {
+    @apply font-condensed font-extrabold uppercase tracking-tighter text-jet-black text-[clamp(2.5rem,6vw,3.75rem)] leading-[1.05];
+  }
+
+  .italic-subheadline {
+    @apply font-condensed font-bold italic text-dusk-blue text-[clamp(2rem,5vw,3rem)] leading-tight uppercase;
+  }
+
+  .eyebrow {
+    @apply font-condensed font-light uppercase tracking-widest-xl text-burnt-peach text-sm md:text-base;
+  }
+
+  .body-text {
+    @apply font-sans font-medium text-dusk-blue text-[15px] leading-relaxed;
+  }
+
+  .stat-number {
+    @apply font-condensed font-extrabold text-jet-black text-3xl md:text-[36px];
+  }
+
+  .label-text {
+    @apply font-sans font-semibold uppercase tracking-widest text-powder-blue text-xs md:text-sm;
+  }
+  
+  .label-text-peach {
+    @apply font-sans font-semibold uppercase tracking-[0.15em] text-burnt-peach text-xs md:text-sm;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-jet-black text-white font-sans font-semibold uppercase tracking-[0.09em] px-8 py-4 transition-all duration-300 hover:bg-burnt-peach hover:scale-[1.03] overflow-hidden relative;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full bg-transparent border-[1.5px] border-dusk-blue text-dusk-blue font-sans font-semibold uppercase tracking-[0.09em] px-8 py-4 transition-all duration-300 hover:border-burnt-peach hover:text-burnt-peach hover:scale-[1.03];
+  }
+
+  .card-border {
+    @apply border border-powder-blue rounded-[20px] bg-light-cyan overflow-hidden;
+  }
+
+  .icon-box {
+    @apply w-[38px] h-[38px] rounded-[10px] border border-powder-blue bg-light-cyan flex items-center justify-center text-dusk-blue shrink-0;
+  }
+}
+
+/* Ticker Animation */
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-ticker {
+  animation: ticker 25s linear infinite;
+}
+
+@keyframes flavorEntrance {
+  0% { opacity: 0; transform: translateY(15px); }
+  15% { opacity: 1; transform: translateY(0); }
+  85% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-15px); }
+}
+
+.animate-flavor-cycle {
+  animation: flavorEntrance 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  display: inline-block;
+}
