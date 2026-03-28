@@ -27,24 +27,24 @@ export default function ProblemSection() {
 
   const problems = [
     {
-      img: "/bilder/haferflocken.jpg",
+      img: "bilder/haferflocken.jpg",
       title: "Der fade Alltag",
       desc: "Morgens Magerquark, abends Haferflocken. Du isst es, weil es gesund ist, nicht weil du dich darauf freust. Jeder Bissen fühlt sich nach Pflicht an."
     },
     {
-      img: "/bilder/kuehlregal.JPG",
+      img: "bilder/kuehlregal.JPG",
       title: "Die Supermarkt-Falle",
       desc: "Du greifst doch zum Fruchtjoghurt oder der fertigen Soße — und holst dir unwissentlich die Zuckerbombe ins Haus, die deinen Fortschritt ruiniert."
     },
     {
-      img: "/bilder/kuehlschrank.JPG",
+      img: "bilder/kuehlschrank.JPG",
       title: "Der Heißhunger am Abend",
       desc: "Weil dein Körper über den Tag keine echten Geschmackserlebnisse bekommen hat, rebelliert er am Abend. Die Diät kippt nicht am Wissen, sondern am Geschmack."
     }
   ];
 
   return (
-    <section ref={containerRef} className="py-24 md:py-32 px-6 bg-light-cyan">
+    <section ref={containerRef} className="py-24 md:py-32 px-6 bg-light-cyan overflow-x-hidden">
       <div className="max-w-6xl mx-auto">
         
         {/* THE MIRROR */}

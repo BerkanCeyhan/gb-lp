@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://BerkanCeyhan.github.io/gb-lp/1",
+  "homepage": "https://try.brustbizeps.de/gb-lp/1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --dest 1",
+    "deploy": "mkdir -p _cname_tmp && echo 'try.brustbizeps.de' > _cname_tmp/CNAME && gh-pages -d _cname_tmp -m 'Set CNAME' && gh-pages -d dist --dest gb-lp/1 --no-clean && rm -rf _cname_tmp",
     "lint": "eslint .",
     "preview": "vite preview"
   },

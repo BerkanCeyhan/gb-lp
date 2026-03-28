@@ -16,7 +16,7 @@ import MobileCTABar from './components/MobileCTABar';
 
 function App() {
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       <Navbar />
       <Hero />
       <AhaMoment />

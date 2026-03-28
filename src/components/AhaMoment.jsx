@@ -38,7 +38,7 @@ export default function AhaMoment() {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-24 px-6 bg-light-cyan-alt relative">
+    <section ref={containerRef} className="py-24 px-6 bg-light-cyan-alt relative overflow-x-hidden">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
         
         {/* TEXT CONTENT */}
@@ -48,12 +48,20 @@ export default function AhaMoment() {
             <span className="eyebrow !text-burnt-peach !mb-0">Die Transformation</span>
           </div>
           
-          <h2 className="section-headline mb-6 min-h-[4rem] lg:min-h-[5rem]">
-            Stell dir vor, dein Magerquark schmeckt wie{' '}
-            <span key={flavorIndex} className={`animate-flavor-cycle inline-block ${FLAVORS[flavorIndex].color}`}>
-              {FLAVORS[flavorIndex].name}
-            </span>
-          </h2>
+<h2 className="section-headline mb-6 hyphens-auto">
+  Stell dir vor, dein Magerquark schmeckt wie
+  <span 
+    className="block mt-1"
+    style={{ height: '2.4em', overflow: 'hidden' }}  
+  >
+    <span
+      key={flavorIndex}
+      className={`animate-flavor-cycle block ${FLAVORS[flavorIndex].color}`}
+    >
+      {FLAVORS[flavorIndex].name}
+    </span>
+  </span>
+</h2>
           
           <p className="italic-subheadline lowercase mb-8">
             — mit nur 4,5 kcal pro portion.
@@ -67,13 +75,12 @@ export default function AhaMoment() {
         {/* VISUAL */}
         <div className="w-full lg:w-1/2 relative aha-card pl-4 md:pl-8">
           <div className="card-border !overflow-visible p-3 md:p-6 bg-white relative z-10">
-            <img 
-              src="/gif-final.gif" 
-              alt="Magerquark mit Geschmacksbombe" 
+            <img
+              src="gif-final.gif"
+              alt="Magerquark mit Geschmacksbombe"
               className="w-full h-[400px] object-cover rounded-[12px]"
               loading="lazy"
-            />
-            
+            />            
             {/* Overlay Badge */}
             <div className="absolute -bottom-6 -left-4 md:-left-12 bg-jet-black text-white p-5 md:p-6 rounded-2xl shadow-xl border border-powder-blue/20 max-w-[200px] md:max-w-[240px] z-20">
               <div className="font-condensed font-extrabold text-2xl md:text-3xl mb-1 text-light-cyan">3g = 50g</div>

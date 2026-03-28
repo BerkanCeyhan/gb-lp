@@ -24,6 +24,15 @@ export default function Hero() {
         ease: 'power3.out',
         delay: 0.4
       });
+
+      gsap.from('.hero-pointer', {
+        x: -20,
+        y: -20,
+        opacity: 0,
+        duration: 0.8,
+        delay: 1,
+        ease: 'power2.out'
+      });
     }, containerRef);
     return () => ctx.revert();
   }, []);
@@ -87,15 +96,26 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/10 pointer-events-none"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-white/5 pointer-events-none"></div>
 
+        {/* Recipe Pointer - Mobile Only */}
+        <div className="hero-pointer absolute top-[8%] left-[6%] z-20 flex flex-col items-center md:hidden pointer-events-none">
+          <span className="font-condensed font-extrabold text-white text-[9px] uppercase tracking-widest bg-burnt-peach px-2 py-1 rounded-md shadow-2xl border border-white/20 whitespace-nowrap -rotate-6">
+            Jetzt mit Rezeptbuch
+          </span>
+          <svg width="32" height="32" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white opacity-40 -mt-1 ml-4 rotate-12">
+            <path d="M5 5C10 20 25 30 45 45" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M30 45H45V30" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+
         {/* Product Image */}
         <img 
-          src="/Vanille.webp" 
+          src="Vanille.webp" 
           alt="Geschmacksbombe Dose" 
           className="hero-img relative z-10 w-full max-w-[320px] md:max-w-[450px] object-contain drop-shadow-2xl rounded-2xl border border-white/10 mix-blend-lighten"
         />
 
         {/* Pill Badge */}
-        <div className="absolute bottom-8 right-8 md:bottom-16 md:right-16 bg-white rounded-full px-6 py-3 shadow-xl z-20 flex items-center gap-3 animate-bounce">
+        <div className="absolute bottom-2 right-4 md:bottom-8 md:right-12 bg-white rounded-full px-6 py-3 shadow-xl z-20 flex items-center gap-3 animate-bounce">
           <div className="w-2 h-2 rounded-full bg-burnt-peach animate-pulse"></div>
           <span className="font-sans font-bold text-jet-black text-sm uppercase tracking-wider">Neu: 7 Sorten probieren</span>
         </div>

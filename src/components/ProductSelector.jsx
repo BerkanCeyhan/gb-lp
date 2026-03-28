@@ -7,9 +7,9 @@ import { productData } from '../data';
 export default function ProductSelector() {
   const containerRef = useRef(null);
   
-  // Default to 6er Set (now index 4 after adding 2 probesets)
-  const [selectedPkg, setSelectedPkg] = useState(productData.packages[4]);
-  const [selectedFlavors, setSelectedFlavors] = useState(Array(6).fill(null));
+  // Default to Probier-Set 9 Sorten (index 1)
+  const [selectedPkg, setSelectedPkg] = useState(productData.packages[1]);
+  const [selectedFlavors, setSelectedFlavors] = useState([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -105,37 +105,47 @@ export default function ProductSelector() {
         
         {/* GALLERY */}
         <div className="w-full lg:w-1/2 lg:sticky lg:top-24 prod-elem">
-          <div className="card-border p-8 bg-white relative overflow-visible flex flex-col items-center justify-center min-h-[400px]">
+          <div className="card-border p-5 md:p-8 bg-white relative overflow-visible flex flex-col items-center justify-center min-h-[400px]">
             {!selectedPkg.isProbeset && (
-              <div className="absolute top-6 left-6 text-dusk-blue text-[10px] font-sans font-bold uppercase tracking-widest px-3 py-1.5 rounded-md border border-powder-blue shadow-sm z-30 bg-white/80 backdrop-blur-sm">
+              <div className="absolute top-3 left-3 md:top-6 md:left-6 text-dusk-blue text-[9px] md:text-[10px] font-sans font-bold uppercase tracking-widest px-2 py-1 md:px-3 md:py-1.5 rounded-md border border-powder-blue shadow-sm z-30 bg-white/80 backdrop-blur-sm">
                 Deine Auswahl
               </div>
             )}
             
             {selectedPkg.badge && (
-              <div className="absolute top-6 right-6 bg-burnt-peach text-white font-condensed font-extrabold uppercase tracking-widest text-sm px-4 py-2 rounded-full shadow-lg z-30">
+              <div className="absolute top-3 right-3 md:top-6 md:right-6 bg-burnt-peach text-white font-condensed font-extrabold uppercase tracking-widest text-xs md:text-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full shadow-lg z-30">
                 {selectedPkg.badge}
               </div>
             )}
 
-            <div className="relative flex flex-wrap justify-center items-center gap-4 my-auto py-12">
+            <div className="relative my-auto py-12">
               {selectedPkg.isProbeset ? (
-                <img src={selectedPkg.image} alt="Probeset" className="w-full max-w-sm object-contain drop-shadow-2xl" />
+                <div className="flex justify-center items-center">
+                  <img src={selectedPkg.image} alt="Probeset" className="w-full max-w-sm object-contain drop-shadow-2xl" />
+                </div>
               ) : (
-                <>
+                <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:justify-center sm:items-center sm:gap-4 justify-items-center items-center">
                   {filledFlavors.length === 0 ? (
-                    <img src={productData.productImages[0]} alt="Dose" className="w-40 md:w-56 object-contain drop-shadow-xl opacity-50 grayscale transition-all duration-500" />
+                    <div className="col-span-3 flex justify-center">
+                      <img src={productData.productImages[0]} alt="Dose" className="w-40 md:w-56 object-contain drop-shadow-xl opacity-50 grayscale transition-all duration-500" />
+                    </div>
                   ) : (
                     Array.from({ length: Math.min(filledFlavors.length, 6) }).map((_, i) => (
-                      <img key={i} src={filledFlavors[i].image} alt={filledFlavors[i].name} className={`w-32 md:w-48 object-contain drop-shadow-xl transition-all duration-500 ${i > 0 ? '-ml-16 md:-ml-24' : ''}`} style={{ zIndex: 10 - i }} />
+                      <img 
+                        key={i} 
+                        src={filledFlavors[i].image} 
+                        alt={filledFlavors[i].name} 
+                        className={`w-20 sm:w-32 md:w-48 object-contain drop-shadow-xl transition-all duration-500 ${i > 0 && 'sm:-ml-16 md:-ml-24'}`} 
+                        style={{ zIndex: 10 - i }} 
+                      />
                     ))
                   )}
                   {selectedPkg.qty > 6 && filledFlavors.length > 6 && (
-                    <div className="w-16 h-16 rounded-full bg-jet-black text-white font-condensed font-extrabold flex items-center justify-center text-xl shadow-lg z-20 -ml-8">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-jet-black text-white font-condensed font-extrabold flex items-center justify-center text-lg sm:text-xl shadow-lg z-20">
                       +{selectedPkg.qty - 6}
                     </div>
                   )}
-                </>
+                </div>
               )}
             </div>
 

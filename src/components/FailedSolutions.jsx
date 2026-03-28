@@ -68,7 +68,7 @@ export default function FailedSolutions() {
                   stroke="#EE6C4D" 
                   strokeWidth="1.5" 
                   strokeDasharray="1000" 
-                  strokeDashoffset="0" 
+                  strokeDashoffset="1000" 
                   className="failed-svg-line opacity-50" 
                 />
               </svg>

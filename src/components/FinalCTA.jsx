@@ -68,9 +68,9 @@ export default function FinalCTA() {
           <p className="font-condensed font-bold text-white uppercase tracking-tighter text-xl mb-4">
             Du willst dich erst selbst überzeugen?
           </p>
-          <button onClick={() => window.open('https://brustbizeps.myshopify.com', '_blank')} className="btn-outline !border-white/30 !text-white hover:!border-burnt-peach hover:!text-burnt-peach flex items-center justify-center mx-auto">
+          <button onClick={scrollToCheckout} className="btn-outline !border-white/30 !text-white hover:!border-burnt-peach hover:!text-burnt-peach flex items-center justify-center mx-auto">
             <PackageOpen className="w-4 h-4 mr-2" />
-            Hol dir das Probeset (7 Sorten)
+            Hol dir das Probeset (9 Sorten)
           </button>
         </div>
 

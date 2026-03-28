@@ -27,13 +27,8 @@ export default function Footer() {
       </div>
 
       <div className="max-w-6xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-        
         <div className="flex items-center gap-2">
-          <div className="relative flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-          </div>
-          <span className="font-sans text-xs uppercase tracking-widest text-white/35 font-semibold">System Operational</span>
+          {/* System Operational removed */}
         </div>
 
         <div className="font-sans text-xs text-white/35 text-center md:text-right">

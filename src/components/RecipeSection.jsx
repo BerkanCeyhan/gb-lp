@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ChefHat, ArrowUpRight } from 'lucide-react';
 
 export default function RecipeSection() {
   const containerRef = useRef(null);
+  const [isBookOpen, setIsBookOpen] = useState(false);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -34,28 +35,28 @@ export default function RecipeSection() {
     {
       title: "Monte Bowl",
       desc: "Wie der bekannte Dessert-Klassiker – nur proteinreich und ohne unnötigen Zucker.",
-      img: "/bilder/monte-bowl.png",
+      img: "bilder/monte-bowl.png",
       flavor: "Schoko Kiddy",
       macros: { kcal: "425", prot: "44,5 g", carbs: "40 g", fat: "7,7 g" }
     },
     {
       title: "XXL Milchschnitte",
-      desc: "Fluffig, cremig und proteinreich – wie das Original, nur ohne Zucker.",
-      img: "/bilder/milchschnitte.png",
+      desc: "Fluffig, cremig and proteinreich – wie das Original, nur ohne Zucker.",
+      img: "bilder/milchschnitte.png",
       flavor: "Vanille",
       macros: { kcal: "444", prot: "34,1 g", carbs: "33,9 g", fat: "18 g" }
     },
     {
       title: "Zimtschnecken Pancakes",
       desc: "Zimtschnecken und Pancakes in einem – klingt nach Cheatday, ist aber komplett clean!",
-      img: "/bilder/zimtschnecken_pancakes.png",
+      img: "bilder/zimtschnecken_pancakes.png",
       flavor: "Tiramisu",
       macros: { kcal: "62", prot: "3,5 g", carbs: "6,4 g", fat: "2,2 g" }
     },
     {
       title: "Erdbeer Protein Bowl",
       desc: "Mehr als nur ein hübsches Frühstück: Eiweiß ist der Baustoff für Muskeln – egal ob im Aufbau oder in der Diät.",
-      img: "/bilder/erdbeer-protein-bowl.png",
+      img: "bilder/erdbeer-protein-bowl.png",
       flavor: "Vanille",
       macros: { kcal: "325", prot: "38 g", carbs: "29 g", fat: "3 g" }
     }
@@ -80,13 +81,28 @@ export default function RecipeSection() {
             </p>
           </div>
           <div className="w-full md:w-1/2 relative">
-            <div className="relative flex flex-col w-full max-w-md mx-auto md:ml-auto md:mr-0 overflow-hidden rounded-[20px] border-2 border-powder-blue shadow-2xl bg-light-cyan">
-              <div className="w-full p-8 flex items-center justify-center min-h-[250px] sm:min-h-[300px]">
-                <img src="/bilder/rezeptbuch.png" alt="Geschmacksbombe Rezeptbuch" className="w-full h-full max-h-[200px] sm:max-h-[250px] object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
+            {/* Glow Effect behind book */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-burnt-peach/10 blur-[80px] rounded-full pointer-events-none"></div>
+
+            <div 
+              className="relative flex flex-col w-full max-w-md mx-auto md:ml-auto md:mr-0 overflow-hidden rounded-[20px] border-2 border-powder-blue shadow-2xl bg-light-cyan cursor-pointer transition-transform hover:scale-[1.02] active:scale-[0.98]"
+              onClick={() => setIsBookOpen(!isBookOpen)}
+            >
+              <div className="w-full p-8 flex items-center justify-center min-h-[250px] sm:min-h-[300px] relative">
+                <img 
+                  src={isBookOpen ? "bilder/aufgeklappt.png" : "bilder/rezeptbuch.png"} 
+                  alt="Geschmacksbombe Rezeptbuch" 
+                  className={`w-full h-full object-contain drop-shadow-2xl transition-all duration-500 ${isBookOpen ? 'max-h-[220px] sm:max-h-[280px]' : 'max-h-[200px] sm:max-h-[250px]'}`} 
+                />
+                {!isBookOpen && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/5 opacity-0 hover:opacity-100 transition-opacity">
+                    <span className="bg-white/90 px-4 py-2 rounded-full font-sans font-bold text-xs uppercase tracking-widest text-jet-black shadow-lg">Klick zum Reinschauen</span>
+                  </div>
+                )}
               </div>
               <div className="text-jet-black bg-white p-6 border-t border-powder-blue/30">
                 <div className="inline-block bg-[#34A853] text-white text-[10px] font-sans font-bold uppercase tracking-widest px-2 py-1 rounded mb-2 shadow-sm">
-                  Kostenlos ab 4er Set
+                  Kostenlos
                 </div>
                 <h4 className="font-condensed font-extrabold uppercase text-xl md:text-2xl tracking-tighter">
                   Das Rezeptbuch (PDF)
@@ -106,7 +122,7 @@ export default function RecipeSection() {
                 <img 
                   src={recipe.img} 
                   alt={recipe.title} 
-                  className="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105" 
+                  className="w-full h-full object-cover opacity-90 transition-transform duration-700" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white pointer-events-none"></div>
                 <div className="absolute top-4 left-4">
