@@ -14,7 +14,7 @@
 
   /* Specific typography from Coastal Fuel */
   .hero-headline {
-    @apply font-condensed font-extrabold uppercase tracking-tighter text-jet-black text-[clamp(4rem,10vw,5.5rem)] leading-[0.95];
+    @apply font-condensed font-extrabold uppercase tracking-tighter text-jet-black text-[clamp(3rem,10vw,5rem)] leading-[0.95];
   }
   
   .section-headline {

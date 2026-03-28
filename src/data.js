@@ -22,7 +22,7 @@ export const productData = {
       price: "24.90",
       compareAtPrice: null,
       badge: "Risikofrei testen",
-      image: "bilder/probe.png",
+      image: "bilder/probe_5.png",
       qty: 1,
       isProbeset: true,
       perks: ["5 Top-Geschmäcker", "Über 70 Portionen", "Versandkostenfrei"]

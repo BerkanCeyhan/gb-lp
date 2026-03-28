@@ -50,7 +50,7 @@ export default function Hero() {
         <span className="eyebrow mb-6 hero-elem block">0% Zucker. 100% Geschmack.</span>
         
         <h1 className="hero-headline mb-4 hero-elem">
-          Deine gesunde Ernährung schmeckt jetzt endlich gut.
+          Deine gesunde Ernährung schmeckt jetzt endlich gut.😋
         </h1>
         
         <p className="italic-subheadline mb-8 hero-elem lowercase">

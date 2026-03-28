@@ -61,11 +61,11 @@ export default function ProblemSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-24 problem-cards-container">
           {problems.map((prob, idx) => (
             <div key={idx} className="card-border p-6 md:p-8 bg-white problem-card group">
-              <div className="w-full aspect-[5/1] mb-6 overflow-hidden rounded-xl bg-light-cyan">
+              <div className="w-full aspect-[5/2] mb-6 overflow-hidden rounded-xl bg-light-cyan">
                 <img
                   src={prob.img}
                   alt={prob.title}
-                  className="w-full h-full object-cover opacity-90"
+                  className="w-full h-full object-cover opacity-90 grayscale"
                   loading="lazy"
                   decoding="async"
                 />

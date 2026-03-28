@@ -74,7 +74,7 @@ export default function RecipeSection() {
               <span className="eyebrow !text-burnt-peach !mb-0">Deine Küchen-Revolution</span>
             </div>
             <h2 className="section-headline mb-6">
-              Viel mehr als nur Quark-Veredler. Dein Ticket für zuckerfreies Backen.
+              Viel mehr als nur Quark-Veredler. Dein Ticket für <span className="text-[#EE6C4D]">zuckerfreies Backen.</span>
             </h2>
             <p className="body-text text-lg">
               Die Geschmacksbombe ist absolut hitzestabil. Verwandle Kuchen, Waffeln, Bowls und Pancakes in tägliche Highlights – ganz ohne Reue, komplett ohne Zucker.

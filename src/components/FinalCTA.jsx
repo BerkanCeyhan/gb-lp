@@ -46,7 +46,7 @@ export default function FinalCTA() {
 
       <div className="max-w-3xl mx-auto text-center cta-container relative z-10">
         
-        <h2 className="section-headline !text-white mb-6 cta-elem">
+        <h2 className="section-headline !text-[#EE6C4D] mb-6 cta-elem">
           Das Ende des bitteren Nachgeschmacks.
         </h2>
         
