@@ -111,6 +111,7 @@ export default function ProductSelector() {
 
   const hasRezeptbuch = selectedPkg.qty >= 4 && !selectedPkg.isProbeset;
   const hasShaker = selectedPkg.qty >= 6 && !selectedPkg.isProbeset;
+  const hasProben = selectedPkg.qty >= 6 && !selectedPkg.isProbeset;
 
   const missingCount = selectedPkg.isProbeset ? 0 : selectedFlavors.filter(f => f === null).length;
   const isReady = missingCount === 0;
@@ -315,41 +316,84 @@ export default function ProductSelector() {
 
           {/* BONUS UNLOCK BAR (Directly under packages) */}
           {!selectedPkg.isProbeset && (
-            <div className={`mb-8 p-4 rounded-xl border flex flex-col sm:flex-row gap-4 md:gap-6 transition-all duration-500 ${hasRezeptbuch || hasShaker ? 'bg-[#E8F7F0] border-[#A8DAB5]' : 'bg-light-cyan/50 border-powder-blue/50'}`}>
-              
-              <div className={`flex flex-1 items-center gap-3 transition-all duration-300 ${hasRezeptbuch ? 'opacity-100' : 'opacity-40 grayscale'}`}>
-                <div className="relative w-12 h-12 shrink-0 rounded-md border border-powder-blue bg-white shadow-sm flex items-center justify-center">
-                  <img src={productData.bonusImages.rezeptbuch} alt="Rezeptbuch" className="w-full h-full object-cover rounded-md" />
+            <div className={`mb-8 rounded-xl border transition-all duration-500 overflow-hidden ${hasRezeptbuch || hasShaker ? 'bg-[#E8F7F0] border-[#A8DAB5]' : 'bg-light-cyan/50 border-powder-blue/50'}`}>
+
+              {/* Rezeptbuch */}
+              <div className={`flex items-center gap-4 p-4 transition-all duration-300 ${hasRezeptbuch ? 'opacity-100' : 'opacity-50 grayscale'}`}>
+                <div className="relative shrink-0">
+                  <img src={productData.bonusImages.rezeptbuch} alt="Rezeptbuch" className="w-16 h-16 object-cover rounded-lg shadow-md" />
                   {hasRezeptbuch && (
                     <div className="absolute -top-2 -right-2 w-5 h-5 bg-[#34A853] rounded-full text-white flex items-center justify-center shadow-md z-10">
                       <Check className="w-3 h-3" />
                     </div>
                   )}
                 </div>
-                <div className="flex flex-col justify-center">
-                  <span className={`font-sans font-bold text-sm leading-tight ${hasRezeptbuch ? 'text-[#1B5E20]' : 'text-jet-black'}`}>
-                    {hasRezeptbuch ? 'Rezeptbuch freigeschaltet!' : 'Gratis Rezeptbuch'}
-                  </span>
-                  {!hasRezeptbuch && <span className="font-sans text-[10px] text-dusk-blue font-semibold uppercase tracking-widest mt-0.5">Ab 4er Set</span>}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 flex-wrap mb-0.5">
+                    <span className={`font-condensed font-extrabold uppercase tracking-tight text-base leading-none ${hasRezeptbuch ? 'text-[#1B5E20]' : 'text-jet-black'}`}>
+                      {hasRezeptbuch ? '🎁 Rezeptbuch freigeschaltet!' : 'Gratis Rezeptbuch'}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="font-sans text-xs font-bold text-[#34A853] bg-[#34A853]/10 px-2 py-0.5 rounded-full">GRATIS</span>
+                    <span className="font-sans text-xs text-powder-blue line-through">24,95€</span>
+                    {!hasRezeptbuch && (
+                      <span className="font-sans text-[10px] text-dusk-blue font-semibold uppercase tracking-widest">· Ab 4er Set</span>
+                    )}
+                    {hasRezeptbuch && (
+                      <span className="font-sans text-xs font-semibold text-[#1B5E20]">Du sparst 24,95€</span>
+                    )}
+                  </div>
                 </div>
               </div>
 
-              <div className="w-px bg-powder-blue/30 hidden sm:block"></div>
+              <div className="mx-4 border-t border-powder-blue/20"></div>
 
-              <div className={`flex flex-1 items-center gap-3 transition-all duration-300 ${hasShaker ? 'opacity-100' : 'opacity-40 grayscale'}`}>
-                <div className="relative w-12 h-12 shrink-0 rounded-md border border-powder-blue bg-white shadow-sm p-1 flex items-center justify-center">
-                  <img src={productData.bonusImages.shaker} alt="Shaker" className="w-full h-full object-contain rounded-md" />
+              {/* Shaker */}
+              <div className={`flex items-center gap-4 p-4 transition-all duration-300 ${hasShaker ? 'opacity-100' : 'opacity-50 grayscale'}`}>
+                <div className="relative shrink-0">
+                  <img src={productData.bonusImages.shaker} alt="Shaker" className="w-16 h-16 object-contain rounded-lg" />
                   {hasShaker && (
                     <div className="absolute -top-2 -right-2 w-5 h-5 bg-[#34A853] rounded-full text-white flex items-center justify-center shadow-md z-10">
                       <Check className="w-3 h-3" />
                     </div>
                   )}
                 </div>
-                <div className="flex flex-col justify-center">
-                  <span className={`font-sans font-bold text-sm leading-tight ${hasShaker ? 'text-[#1B5E20]' : 'text-jet-black'}`}>
-                    {hasShaker ? 'Shaker freigeschaltet!' : 'Gratis Shaker'}
-                  </span>
-                  {!hasShaker && <span className="font-sans text-[10px] text-dusk-blue font-semibold uppercase tracking-widest mt-0.5">Ab 6er Set</span>}
+                <div className="flex-1 min-w-0">
+                  <div className="mb-0.5">
+                    <span className={`font-condensed font-extrabold uppercase tracking-tight text-base leading-none ${hasShaker ? 'text-[#1B5E20]' : 'text-jet-black'}`}>
+                      {hasShaker ? '🎁 Shaker freigeschaltet!' : 'Gratis Classic Shaker'}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="font-sans text-xs font-bold text-[#34A853] bg-[#34A853]/10 px-2 py-0.5 rounded-full">GRATIS</span>
+                    <span className="font-sans text-xs text-powder-blue line-through">14,95€</span>
+                    {!hasShaker && (
+                      <span className="font-sans text-[10px] text-dusk-blue font-semibold uppercase tracking-widest">· Ab 6er Set</span>
+                    )}
+                    {hasShaker && (
+                      <span className="font-sans text-xs font-semibold text-[#1B5E20]">Du sparst 14,95€</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              <div className="mx-4 border-t border-powder-blue/20"></div>
+
+              {/* 2 Gratis-Proben */}
+              <div className={`flex items-center gap-4 p-4 transition-all duration-300 ${hasProben ? 'opacity-100' : 'opacity-50 grayscale'}`}>
+                <div className="flex-1 min-w-0">
+                  <div className="mb-0.5">
+                    <span className={`font-condensed font-extrabold uppercase tracking-tight text-base leading-none ${hasProben ? 'text-[#1B5E20]' : 'text-jet-black'}`}>
+                      {hasProben ? '🎁 2 Gratis-Proben freigeschaltet!' : '2 Gratis-Proben'}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="font-sans text-xs font-bold text-[#34A853] bg-[#34A853]/10 px-2 py-0.5 rounded-full">GRATIS</span>
+                    {!hasProben && (
+                      <span className="font-sans text-[10px] text-dusk-blue font-semibold uppercase tracking-widest">· Ab 6er Set</span>
+                    )}
+                  </div>
                 </div>
               </div>
 
