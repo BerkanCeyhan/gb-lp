@@ -1,0 +1,80 @@
+{
+  "product": {
+    "id": 10529465860360,
+    "title": "Geschmacksbombe Rezeptbuch (PDF)",
+    "body_html": "\u003Cp data-start=\"79\" data-end=\"479\"\u003EDu willst maximalen Geschmack bei schlanken Kalorien – ohne lang in der Küche zu stehen? Mit dem Geschmacksbombe Rezeptbuch bekommst du \u003Cstrong data-start=\"215\" data-end=\"249\"\u003E47 einfache &amp; schnelle Rezepte\u003C/strong\u003E auf \u003Cstrong data-start=\"254\" data-end=\"268\"\u003E109 Seiten\u003C/strong\u003E, alle entwickelt mit dem Geschmacksbombe Flavour Pulver. Jedes Rezept kommt mit klarer Anleitung, Portionsangaben und \u003Cstrong data-start=\"387\" data-end=\"415\"\u003Evollständigen Nährwerten\u003C/strong\u003E – perfekt für deinen Alltag zwischen Gym, Arbeit und Meal-Prep.\u003C/p\u003E\n\u003Cp data-start=\"481\" data-end=\"815\"\u003EDie Kapitel führen dich von \u003Cstrong data-start=\"509\" data-end=\"525\"\u003EBowls &amp; Oats\u003C/strong\u003E über \u003Cstrong data-start=\"531\" data-end=\"552\"\u003EKuchen &amp; Küchlein\u003C/strong\u003E, \u003Cstrong data-start=\"554\" data-end=\"576\"\u003EMugcakes &amp; Muffins\u003C/strong\u003E und \u003Cstrong data-start=\"581\" data-end=\"603\"\u003EPancakes &amp; Waffeln\u003C/strong\u003E bis zu \u003Cstrong data-start=\"611\" data-end=\"621\"\u003EShakes\u003C/strong\u003E und \u003Cstrong data-start=\"626\" data-end=\"638\"\u003EDesserts\u003C/strong\u003E. So findest du in Sekunden genau das, worauf du Lust hast – und bleibst deiner Form treu. \u003Cstrong data-start=\"729\" data-end=\"756\"\u003ESofort-Download als PDF\u003C/strong\u003E nach dem Kauf, optimal für Smartphone, Tablet und Desktop.\u003C/p\u003E",
+    "vendor": "BrustBizeps",
+    "product_type": "",
+    "created_at": "2025-09-24T16:01:38+02:00",
+    "handle": "geschmacksbombe-rezeptbuch",
+    "updated_at": "2026-03-27T16:26:10+01:00",
+    "published_at": "2025-09-24T16:01:41+02:00",
+    "template_suffix": "rezeptbuch",
+    "published_scope": "web",
+    "tags": "GB, geschmacksbombe",
+    "variants": [
+      {
+        "id": 52496277504264,
+        "product_id": 10529465860360,
+        "title": "Default Title",
+        "price": "24.95",
+        "sku": null,
+        "position": 1,
+        "compare_at_price": "",
+        "fulfillment_service": "manual",
+        "inventory_management": "shopify",
+        "option1": "Default Title",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-09-24T16:01:38+02:00",
+        "updated_at": "2026-03-27T16:26:10+01:00",
+        "taxable": true,
+        "barcode": "",
+        "grams": 0,
+        "image_id": null,
+        "weight": 0,
+        "weight_unit": "kg",
+        "requires_shipping": false,
+        "price_currency": "EUR",
+        "compare_at_price_currency": ""
+      }
+    ],
+    "options": [
+      {
+        "id": 13057496187144,
+        "product_id": 10529465860360,
+        "name": "Title",
+        "position": 1,
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 72474851442952,
+        "product_id": 10529465860360,
+        "position": 1,
+        "created_at": "2025-09-24T16:28:38+02:00",
+        "updated_at": "2025-09-24T16:28:41+02:00",
+        "alt": null,
+        "width": 1800,
+        "height": 1800,
+        "src": "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/DesignohneTitel-2025-09-24T162834.351.jpg?v=1758724121",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 72474851442952,
+      "product_id": 10529465860360,
+      "position": 1,
+      "created_at": "2025-09-24T16:28:38+02:00",
+      "updated_at": "2025-09-24T16:28:41+02:00",
+      "alt": null,
+      "width": 1800,
+      "height": 1800,
+      "src": "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/DesignohneTitel-2025-09-24T162834.351.jpg?v=1758724121",
+      "variant_ids": []
+    }
+  }
+}
