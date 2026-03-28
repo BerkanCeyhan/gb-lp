@@ -115,9 +115,9 @@ export default function Hero() {
         />
 
         {/* Pill Badge */}
-        <div className="absolute bottom-2 right-4 md:bottom-8 md:right-12 bg-white rounded-full px-6 py-3 shadow-xl z-20 flex items-center gap-3 animate-bounce">
-          <div className="w-2 h-2 rounded-full bg-burnt-peach animate-pulse"></div>
-          <span className="font-sans font-bold text-jet-black text-sm uppercase tracking-wider">Neu: 7 Sorten probieren</span>
+        <div className="absolute bottom-0 right-3 md:bottom-8 md:right-12 bg-white rounded-full px-3 py-1.5 md:px-6 md:py-3 shadow-xl z-20 flex items-center gap-2 md:gap-3 animate-bounce opacity-50 md:opacity-100">
+          <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-burnt-peach animate-pulse"></div>
+          <span className="font-sans font-bold text-jet-black text-[10px] md:text-sm uppercase tracking-wider">Neu: 7 Sorten probieren</span>
         </div>
       </div>
 
