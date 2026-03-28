@@ -71,18 +71,18 @@ export const productData = {
     }
   ],
   flavors: [
-    { name: "🫐 Blaubeer-Käsekuchen", id: "50647839310088", image: "bilder/blaubeer.png" },
-    { name: "🍎 Apfel-Zimt", id: "39608308269139", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/9_89573c2d-9cba-45d6-b909-213e03bb875c.png?v=1737585945" },
-    { name: "🍌 Bananensplit", id: "39608308236371", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/8_9985277f-89f1-4ec1-859b-ceaede9bca14.png?v=1737585945" },
-    { name: "🍪 Butterkeks", id: "39608308301907", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/10_5ec2c3d9-4e4c-4a8f-9168-c33a14735feb.png?v=1737585945" },
-    { name: "🍓 Erdbeer-Wunder", id: "39608308334675", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/11_03af6eb2-ee74-4533-aa61-3e0653c117c5.png?v=1737585945" },
-    { name: "🥜 Erdnuss Karamell", id: "43528511553800", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/16_0a016ec6-eea4-49fc-add3-6cdc271e0734.png?v=1737585945" },
-    { name: "🌰 Haselnuss", id: "39608308367443", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/12_8a3c0be0-008d-4cde-9f48-3f24095a3d58.png?v=1737585945" },
-    { name: "💋 Himbeere", id: "43528504082696", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/18_51640b51-5ad6-43c5-85c8-9f7645335521.png?v=1737585945" },
-    { name: "🍒 Kirsch-Wunder", id: "50647839342856", image: "bilder/Kirschwunder.png" },
-    { name: "🍫 Schoko Kiddy", id: "39608308432979", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/15_cf91033d-7577-46fc-b3b4-7a4bacd97ff1.png?v=1737497782" },
-    { name: "☕️ Tiramisu", id: "39608308498515", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/19_ed634019-9ca6-411b-99f6-3e39ee6d2c24.png?v=1737497782" },
-    { name: "🍨 Vanille", id: "43528505590024", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/17_3851e7df-91fe-4e2d-b884-7e420123e3f7_1.png?v=1737497782" }
+    { name: "🫐 Blaubeer-Käsekuchen", id: "50647839310088", image: "bilder/blaubeer.png", ingredientImage: "flavors/blaubeer-kaesekuchen.webp" },
+    { name: "🍎 Apfel-Zimt", id: "39608308269139", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/9_89573c2d-9cba-45d6-b909-213e03bb875c.png?v=1737585945", ingredientImage: "flavors/apfel-zimt.webp" },
+    { name: "🍌 Bananensplit", id: "39608308236371", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/8_9985277f-89f1-4ec1-859b-ceaede9bca14.png?v=1737585945", ingredientImage: "flavors/bananensplit.webp" },
+    { name: "🍪 Butterkeks", id: "39608308301907", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/10_5ec2c3d9-4e4c-4a8f-9168-c33a14735feb.png?v=1737585945", ingredientImage: "flavors/butterkeks.webp" },
+    { name: "🍓 Erdbeer-Wunder", id: "39608308334675", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/11_03af6eb2-ee74-4533-aa61-3e0653c117c5.png?v=1737585945", ingredientImage: "flavors/erdbeer-wunder.webp" },
+    { name: "🥜 Erdnuss Karamell", id: "43528511553800", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/16_0a016ec6-eea4-49fc-add3-6cdc271e0734.png?v=1737585945", ingredientImage: "flavors/erdnuss-karamell.webp" },
+    { name: "🌰 Haselnuss", id: "39608308367443", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/12_8a3c0be0-008d-4cde-9f48-3f24095a3d58.png?v=1737585945", ingredientImage: "flavors/haselnuss.webp" },
+    { name: "💋 Himbeere", id: "43528504082696", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/18_51640b51-5ad6-43c5-85c8-9f7645335521.png?v=1737585945", ingredientImage: "flavors/himbeere.webp" },
+    { name: "🍒 Kirsch-Wunder", id: "50647839342856", image: "bilder/Kirschwunder.png", ingredientImage: "flavors/kirsch-wunder.webp" },
+    { name: "🍫 Schoko Kiddy", id: "39608308432979", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/15_cf91033d-7577-46fc-b3b4-7a4bacd97ff1.png?v=1737497782", ingredientImage: "flavors/schoko-kiddy.webp" },
+    { name: "☕️ Tiramisu", id: "39608308498515", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/19_ed634019-9ca6-411b-99f6-3e39ee6d2c24.png?v=1737497782", ingredientImage: "flavors/tiramisu.webp" },
+    { name: "🍨 Vanille", id: "43528505590024", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/17_3851e7df-91fe-4e2d-b884-7e420123e3f7_1.png?v=1737497782", ingredientImage: "flavors/vanille.png" }
   ]
 };
 
