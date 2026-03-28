@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "mkdir -p _cname_tmp && echo 'try.brustbizeps.de' > _cname_tmp/CNAME && gh-pages -d _cname_tmp -m 'Set CNAME' && gh-pages -d dist --dest gb-lp/1 --no-clean && rm -rf _cname_tmp",
+    "deploy": "mkdir -p _cname_tmp && echo 'try.brustbizeps.de' > _cname_tmp/CNAME && gh-pages -d _cname_tmp -m 'Set CNAME' && gh-pages -d dist --dest gb-lp/1 -a && rm -rf _cname_tmp",
     "lint": "eslint .",
     "preview": "vite preview"
   },
