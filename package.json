@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://BerkanCeyhan.github.io/gb-lp",
+  "homepage": "https://BerkanCeyhan.github.io/gb-lp/1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
