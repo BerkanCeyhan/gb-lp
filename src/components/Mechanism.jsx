@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { BookOpen, Droplets, Leaf, Sparkles, Zap, Scale } from 'lucide-react';
 
 export default function Mechanism() {
@@ -13,11 +14,20 @@ export default function Mechanism() {
         scrollTrigger: { trigger: '.mech-content', start: 'top 85%' }
       });
 
-      // Flow Connector Animation
+      // Flow Connector Animation — paused when scrolled out of view
       const tl = gsap.timeline({
         scrollTrigger: { trigger: '.mech-flow', start: 'top 75%' },
         repeat: -1,
         repeatDelay: 1.5
+      });
+      ScrollTrigger.create({
+        trigger: '.mech-flow',
+        start: 'top bottom',
+        end: 'bottom top',
+        onLeave: () => tl.pause(),
+        onLeaveBack: () => tl.pause(),
+        onEnter: () => tl.play(),
+        onEnterBack: () => tl.play(),
       });
       
       // 1. Initial paths draw in
@@ -80,7 +90,7 @@ export default function Mechanism() {
                 Inulin ist ein natürlicher, pflanzlicher Ballaststoff. Es gibt dem Pulver sein Volumen und sorgt für diese unvergleichlich cremige Textur im Quark – ganz ohne Kalorien oder Kohlenhydrate beizusteuern.
               </p>
               <div className="ml-0 sm:ml-8 w-full max-w-sm aspect-[5/2] overflow-hidden rounded-xl bg-light-cyan-alt border border-powder-blue">
-                <img src="bilder/chicoree.jpg" alt="Chicorée Wurzel" className="w-full h-full object-cover opacity-90" />
+                <img src="bilder/chicoree.jpg" alt="Chicorée Wurzel" className="w-full h-full object-cover opacity-90" loading="lazy" decoding="async" />
               </div>
             </div>
 
@@ -93,7 +103,7 @@ export default function Mechanism() {
                 Durch eine exakt abgestimmte Mischung aus Stevioglycosiden und Sucralose erreichen wir maximale Süßkraft ohne kalorienwirksame Kohlenhydrate. Das macht die Geschmacksbombe zu 100% diabetikergeeignet.
               </p>
               <div className="ml-0 sm:ml-8 w-full max-w-sm aspect-[5/2] overflow-hidden rounded-xl bg-light-cyan-alt border border-powder-blue mb-3">
-                <img src="bilder/sucralose.jpg" alt="Süße" className="w-full h-full object-cover opacity-90" />
+                <img src="bilder/sucralose.jpg" alt="Süße" className="w-full h-full object-cover opacity-90" loading="lazy" decoding="async" />
               </div>
               <div className="ml-0 sm:ml-8 flex items-start gap-2 bg-[#E8F7F0] text-[#1B5E20] px-3 py-2 rounded-lg border border-[#A8DAB5]">
                 <span className="text-[10px] uppercase font-sans font-bold tracking-widest pt-0.5">Wichtig:</span>
@@ -110,7 +120,7 @@ export default function Mechanism() {
                 Im Gegensatz zu vielen Alternativen verliert das Pulver beim Backen nicht an Geschmack. Kombiniere es mit den 47 Rezepten aus unserem beiliegenden Rezeptbuch (109 Seiten) für perfekte Kuchen, Pancakes und Bowls.
               </p>
               <div className="ml-0 sm:ml-8 w-full max-w-sm aspect-[5/2] overflow-hidden rounded-xl bg-light-cyan-alt border border-powder-blue">
-                <img src="bilder/backen.jpg" alt="Backen" className="w-full h-full object-cover opacity-90" />
+                <img src="bilder/backen.jpg" alt="Backen" className="w-full h-full object-cover opacity-90" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -148,7 +158,7 @@ export default function Mechanism() {
             <div className="node-1 relative z-10 w-44 p-4 rounded-xl border-2 border-powder-blue bg-light-cyan-alt text-center shadow-lg opacity-0">
               <div className="flex flex-col items-center gap-2">
                 <div className="h-16 w-16 bg-white rounded-full flex items-center justify-center border border-powder-blue p-2">
-                  <img src="bilder/loeffel.png" alt="Messlöffel" className="w-full h-full object-contain" />
+                  <img src="bilder/loeffel.png" alt="Messlöffel" className="w-full h-full object-contain" loading="lazy" decoding="async" />
                 </div>
                 <div>
                   <div className="font-condensed font-extrabold uppercase text-jet-black leading-tight text-lg">3g Dosierung</div>

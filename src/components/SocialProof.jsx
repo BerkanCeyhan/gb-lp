@@ -38,7 +38,7 @@ export default function SocialProof() {
             <div key={idx} className="card-border bg-white p-6 md:p-8 proof-elem flex flex-col h-full">
               {review.image && (
                 <div className="w-full aspect-[4/3] mb-6 overflow-hidden rounded-xl bg-light-cyan">
-                  <img src={review.image} alt={`Review von ${review.name}`} className="w-full h-full object-cover opacity-90" />
+                  <img src={review.image} alt={`Review von ${review.name}`} className="w-full h-full object-cover opacity-90" loading="lazy" decoding="async" />
                 </div>
               )}
               <div className="flex items-center gap-1 mb-4 text-burnt-peach">

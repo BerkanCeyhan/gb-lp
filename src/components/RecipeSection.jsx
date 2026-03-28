@@ -90,9 +90,11 @@ export default function RecipeSection() {
             >
               <div className="w-full p-8 flex items-center justify-center min-h-[250px] sm:min-h-[300px] relative">
                 <img 
-                  src={isBookOpen ? "bilder/aufgeklappt.png" : "bilder/rezeptbuch.png"} 
-                  alt="Geschmacksbombe Rezeptbuch" 
-                  className={`w-full h-full object-contain drop-shadow-2xl transition-all duration-500 ${isBookOpen ? 'max-h-[220px] sm:max-h-[280px]' : 'max-h-[200px] sm:max-h-[250px]'}`} 
+                  src={isBookOpen ? "bilder/aufgeklappt.png" : "bilder/rezeptbuch.png"}
+                  alt="Geschmacksbombe Rezeptbuch"
+                  className={`w-full h-full object-contain drop-shadow-2xl transition-all duration-500 ${isBookOpen ? 'max-h-[220px] sm:max-h-[280px]' : 'max-h-[200px] sm:max-h-[250px]'}`}
+                  loading="lazy"
+                  decoding="async"
                 />
                 {!isBookOpen && (
                   <div className="absolute inset-0 flex items-center justify-center bg-black/5 opacity-0 hover:opacity-100 transition-opacity">
@@ -119,10 +121,12 @@ export default function RecipeSection() {
               
               {/* Image Header */}
               <div className="relative h-48 sm:h-56 w-full overflow-hidden bg-light-cyan">
-                <img 
-                  src={recipe.img} 
-                  alt={recipe.title} 
-                  className="w-full h-full object-cover opacity-90 transition-transform duration-700" 
+                <img
+                  src={recipe.img}
+                  alt={recipe.title}
+                  className="w-full h-full object-cover opacity-90 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white pointer-events-none"></div>
                 <div className="absolute top-4 left-4">

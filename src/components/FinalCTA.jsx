@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, PackageOpen } from 'lucide-react';
 
 export default function FinalCTA() {
@@ -12,13 +13,18 @@ export default function FinalCTA() {
         scrollTrigger: { trigger: '.cta-container', start: 'top 85%' }
       });
       
-      // Pulse animation for the main CTA button
-      gsap.to('.pulse-btn', {
-        scale: 1.02,
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut'
+      // Pulse animation — only runs when section is in viewport
+      const pulseAnim = gsap.to('.pulse-btn', {
+        scale: 1.02, duration: 2, repeat: -1, yoyo: true, ease: 'sine.inOut', paused: true
+      });
+      ScrollTrigger.create({
+        trigger: '.cta-container',
+        start: 'top bottom',
+        end: 'bottom top',
+        onEnter: () => pulseAnim.play(),
+        onLeave: () => pulseAnim.pause(),
+        onEnterBack: () => pulseAnim.play(),
+        onLeaveBack: () => pulseAnim.pause(),
       });
     }, containerRef);
     return () => ctx.revert();

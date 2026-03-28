@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ShoppingBag, Check, Gift, Plus, X, Heart, Truck, ShieldCheck } from 'lucide-react';
-import confetti from 'canvas-confetti';
 import { productData } from '../data';
 
 export default function ProductSelector() {
@@ -29,11 +28,8 @@ export default function ProductSelector() {
     const willBeShaker = pkg.qty >= 6 && !pkg.isProbeset;
 
     if ((!wasRezeptbuch && willBeRezeptbuch) || (!wasShaker && willBeShaker)) {
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: ['#EE6C4D', '#D4F5F7', '#293241']
+      import('canvas-confetti').then(({ default: confetti }) => {
+        confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 }, colors: ['#EE6C4D', '#D4F5F7', '#293241'] });
       });
     }
 
@@ -121,21 +117,23 @@ export default function ProductSelector() {
             <div className="relative my-auto py-12">
               {selectedPkg.isProbeset ? (
                 <div className="flex justify-center items-center">
-                  <img src={selectedPkg.image} alt="Probeset" className="w-full max-w-sm object-contain drop-shadow-2xl" />
+                  <img src={selectedPkg.image} alt="Probeset" className="w-full max-w-sm object-contain drop-shadow-2xl" loading="lazy" decoding="async" />
                 </div>
               ) : (
                 <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:justify-center sm:items-center sm:gap-4 justify-items-center items-center">
                   {filledFlavors.length === 0 ? (
                     <div className="col-span-3 flex justify-center">
-                      <img src={productData.productImages[0]} alt="Dose" className="w-40 md:w-56 object-contain drop-shadow-xl opacity-50 grayscale transition-all duration-500" />
+                      <img src={productData.productImages[0]} alt="Dose" className="w-40 md:w-56 object-contain drop-shadow-xl opacity-50 grayscale transition-all duration-500" loading="lazy" decoding="async" />
                     </div>
                   ) : (
                     Array.from({ length: Math.min(filledFlavors.length, 6) }).map((_, i) => (
                       <img 
                         key={i} 
-                        src={filledFlavors[i].image} 
-                        alt={filledFlavors[i].name} 
-                        className={`w-20 sm:w-32 md:w-48 object-contain drop-shadow-xl transition-all duration-500 ${i > 0 && 'sm:-ml-16 md:-ml-24'}`} 
+                        src={filledFlavors[i].image}
+                        alt={filledFlavors[i].name}
+                        className={`w-20 sm:w-32 md:w-48 object-contain drop-shadow-xl transition-all duration-500 ${i > 0 && 'sm:-ml-16 md:-ml-24'}`}
+                        loading="lazy"
+                        decoding="async"
                         style={{ zIndex: 10 - i }} 
                       />
                     ))
@@ -221,7 +219,7 @@ export default function ProductSelector() {
                         {isSelected && <Check className="w-3 h-3 text-white" />}
                       </div>
                       <div className="w-12 h-12 shrink-0 bg-white rounded border border-powder-blue/30 flex items-center justify-center overflow-hidden">
-                        <img src={pkg.image} alt={pkg.label} className={`w-full h-full object-contain ${!pkg.isProbeset && 'scale-125'}`} />
+                        <img src={pkg.image} alt={pkg.label} className={`w-full h-full object-contain ${!pkg.isProbeset && 'scale-125'}`} loading="lazy" decoding="async" />
                       </div>
                       <div>
                         <div className="font-condensed font-bold uppercase text-lg text-jet-black tracking-tighter leading-none mb-1 flex flex-wrap items-center gap-2">

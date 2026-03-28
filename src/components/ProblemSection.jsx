@@ -62,10 +62,12 @@ export default function ProblemSection() {
           {problems.map((prob, idx) => (
             <div key={idx} className="card-border p-6 md:p-8 bg-white problem-card group">
               <div className="w-full aspect-[5/1] mb-6 overflow-hidden rounded-xl bg-light-cyan">
-                <img 
-                  src={prob.img} 
-                  alt={prob.title} 
-                  className="w-full h-full object-cover opacity-90" 
+                <img
+                  src={prob.img}
+                  alt={prob.title}
+                  className="w-full h-full object-cover opacity-90"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="font-condensed font-bold text-jet-black text-2xl uppercase tracking-tighter mb-4">

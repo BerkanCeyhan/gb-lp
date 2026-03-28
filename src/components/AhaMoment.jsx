@@ -15,10 +15,19 @@ export default function AhaMoment() {
   const [flavorIndex, setFlavorIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setFlavorIndex(prev => (prev + 1) % FLAVORS.length);
-    }, 2500);
-    return () => clearInterval(interval);
+    let interval;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          interval = setInterval(() => setFlavorIndex(prev => (prev + 1) % FLAVORS.length), 2500);
+        } else {
+          clearInterval(interval);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (containerRef.current) observer.observe(containerRef.current);
+    return () => { observer.disconnect(); clearInterval(interval); };
   }, []);
 
   useEffect(() => {
