@@ -89,7 +89,7 @@ export default function Hero() {
       </div>
 
       {/* RIGHT VISUAL */}
-      <div className="w-full md:w-1/2 bg-jet-black relative flex items-center justify-center min-h-[50vh] md:min-h-screen order-1 md:order-2 overflow-hidden px-8">
+      <div className="w-full md:w-1/2 bg-jet-black relative flex items-center justify-center aspect-[3/4] md:aspect-auto md:min-h-screen order-1 md:order-2 overflow-hidden px-8">
         
         {/* Concentric Ghost Circles */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5 pointer-events-none"></div>
@@ -97,7 +97,7 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-white/5 pointer-events-none"></div>
 
         {/* Recipe Pointer - Mobile Only */}
-        <div className="hero-pointer absolute top-[8%] left-[6%] z-20 flex flex-col items-center md:hidden pointer-events-none">
+        <div className="hero-pointer absolute top-[22%] left-[5%] z-20 flex flex-col items-center md:hidden pointer-events-none">
           <span className="font-condensed font-extrabold text-white text-[9px] uppercase tracking-widest bg-burnt-peach px-2 py-1 rounded-md shadow-2xl border border-white/20 whitespace-nowrap -rotate-6">
             Jetzt mit Rezeptbuch
           </span>
@@ -115,9 +115,9 @@ export default function Hero() {
         />
 
         {/* Pill Badge */}
-        <div className="absolute bottom-0 right-3 md:bottom-8 md:right-12 bg-white rounded-full px-3 py-1.5 md:px-6 md:py-3 shadow-xl z-20 flex items-center gap-2 md:gap-3 animate-bounce opacity-50 md:opacity-100">
-          <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-burnt-peach animate-pulse"></div>
-          <span className="font-sans font-bold text-jet-black text-[10px] md:text-sm uppercase tracking-wider">Neu: 7 Sorten probieren</span>
+        <div className="absolute bottom-2 right-3 md:bottom-8 md:right-12 bg-white rounded-full px-4 py-2 md:px-6 md:py-3 shadow-xl z-20 flex items-center gap-2 md:gap-3 animate-bounce">
+          <div className="w-2 h-2 rounded-full bg-burnt-peach animate-pulse"></div>
+          <span className="font-sans font-bold text-jet-black text-xs md:text-sm uppercase tracking-wider">Neu: 7 Sorten probieren</span>
         </div>
       </div>
 
