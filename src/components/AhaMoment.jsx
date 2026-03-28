@@ -19,7 +19,7 @@ export default function AhaMoment() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          interval = setInterval(() => setFlavorIndex(prev => (prev + 1) % FLAVORS.length), 2500);
+          interval = setInterval(() => setFlavorIndex(prev => (prev + 1) % FLAVORS.length), 1800);
         } else {
           clearInterval(interval);
         }

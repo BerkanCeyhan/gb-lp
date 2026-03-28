@@ -46,7 +46,7 @@ export default function FinalCTA() {
 
       <div className="max-w-3xl mx-auto text-center cta-container relative z-10">
         
-        <h2 className="section-headline !text-[#EE6C4D] mb-6 cta-elem">
+        <h2 className="section-headline !text-white mb-6 cta-elem">
           Das Ende des bitteren Nachgeschmacks.
         </h2>
         
@@ -55,7 +55,7 @@ export default function FinalCTA() {
         </p>
 
         <div className="cta-elem mb-8">
-          <button onClick={scrollToCheckout} className="btn-primary pulse-btn w-full md:w-auto px-12 py-5 text-lg">
+          <button onClick={scrollToCheckout} className="btn-primary pulse-btn w-full md:w-auto px-12 py-5 text-lg !bg-[#EE6C4D] !border-[#EE6C4D]">
             Jetzt Geschmack entdecken
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>

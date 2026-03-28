@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { UtensilsCrossed, Frown, TrendingDown, Clock, AlertCircle, XCircle } from 'lucide-react';
 
 export default function ProblemSection() {
   const containerRef = useRef(null);
@@ -11,7 +10,7 @@ export default function ProblemSection() {
         y: 30, opacity: 0, duration: 0.8, stagger: 0.1,
         scrollTrigger: { trigger: '.problem-intro', start: 'top 85%' }
       });
-      
+
       gsap.from('.problem-card', {
         y: 40, opacity: 0, duration: 0.8, stagger: 0.15,
         scrollTrigger: { trigger: '.problem-cards-container', start: 'top 85%' }
@@ -21,6 +20,7 @@ export default function ProblemSection() {
         y: 30, opacity: 0, duration: 0.8, stagger: 0.1,
         scrollTrigger: { trigger: '.agitation-container', start: 'top 85%' }
       });
+
     }, containerRef);
     return () => ctx.revert();
   }, []);
@@ -90,23 +90,38 @@ export default function ProblemSection() {
               Was passiert, wenn sich nichts ändert?
             </h3>
             <p className="italic-subheadline lowercase !text-2xl">
-              — der ewige kreislauf des aufgebens.
+              der ewige kreislauf des aufgebens...
             </p>
           </div>
 
-          <div className="space-y-6 agitation-elem">
-            {[
-              "Du isst weiterhin gesunde Lebensmittel, die dir keine Freude bereiten.",
-              "Du brichst deine Ernährungsziele ab, weil Verzicht auf Dauer nicht funktioniert.",
-              "Du gibst Geld für überteuerte \"Fitness-Snacks\" aus, die voller künstlicher Zusätze stecken."
-            ].map((text, i) => (
-              <div key={i} className="flex items-start gap-4 p-4 border border-powder-blue/50 rounded-xl bg-light-cyan/30">
-                <AlertCircle className="w-6 h-6 text-burnt-peach shrink-0 mt-0.5" />
-                <p className="body-text font-semibold text-jet-black">
-                  {text}
-                </p>
+          {/* DOWNWARD SPIRAL */}
+          <div className="cycle-container agitation-elem">
+            <div className="space-y-3">
+              {[
+                { num: "01", label: "Du startest motiviert. Wieder.", sub: "«Diesmal halte ich durch.»", accent: false },
+                { num: "02", label: "Fade Mahlzeiten. Kein Genuss.", sub: "Essen fühlt sich wie Strafe an — nicht wie Leben.", accent: false },
+                { num: "03", label: "Heißhunger schlägt zu.", sub: "Dein Körper schreit nach echtem Geschmack.", accent: true },
+                { num: "04", label: "Aufgeben. Wieder.", sub: "Schuld. Frust. «Ich schaff das einfach nicht.»", accent: true },
+              ].map((step, i) => (
+                <div key={i} className="flex items-start gap-4 p-4 rounded-xl border border-powder-blue/50 bg-light-cyan/30">
+                  <span className={`font-condensed font-extrabold text-3xl leading-none mt-0.5 shrink-0 ${step.accent ? 'text-burnt-peach' : 'text-powder-blue'}`}>
+                    {step.num}
+                  </span>
+                  <div>
+                    <p className={`font-semibold text-base ${step.accent ? 'text-burnt-peach' : 'text-jet-black'}`}>
+                      {step.label}
+                    </p>
+                    <p className="text-sm text-dusk-blue/70 mt-0.5 italic">{step.sub}</p>
+                  </div>
+                </div>
+              ))}
+
+              {/* Loop back */}
+              <div className="flex items-center gap-3 pt-1 pl-2">
+                <span className="text-burnt-peach/50 text-lg">↩</span>
+                <span className="text-xs uppercase tracking-widest text-burnt-peach/50 font-semibold">Und der Kreislauf beginnt von vorn.</span>
               </div>
-            ))}
+            </div>
           </div>
 
         </div>
