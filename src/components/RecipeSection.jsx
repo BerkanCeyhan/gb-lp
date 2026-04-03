@@ -71,10 +71,10 @@ export default function RecipeSection() {
           <div className="w-full md:w-1/2">
             <div className="flex items-center gap-2 mb-6 text-burnt-peach">
               <ChefHat className="w-6 h-6" />
-              <span className="eyebrow !text-burnt-peach !mb-0">Deine Küchen-Revolution</span>
+              <span className="eyebrow !text-burnt-peach !mb-0">Nicht nur für Quark.</span>
             </div>
             <h2 className="section-headline mb-6">
-              Quark war erst der Anfang. 47 Rezepte für Kuchen, Pancakes und Bowls – <span className="text-[#EE6C4D]">komplett ohne Zucker, komplett ohne schlechtes Gewissen.</span>
+              47 Rezepte. Kuchen, Pancakes, Bowls, Shakes – <span className="text-[#EE6C4D]">komplett ohne schlechtes Gewissen.</span>
             </h2>
             <p className="body-text text-lg">
               Die Geschmacksbombe ist absolut hitzestabil. Verwandle Kuchen, Waffeln, Bowls und Pancakes in tägliche Highlights – ganz ohne Reue, komplett ohne Zucker.
@@ -183,7 +183,7 @@ export default function RecipeSection() {
               ...und 43 weitere Rezepte erwarten dich.
             </h3>
             <p className="body-text !text-white/80 mb-8">
-              Kuchen, Muffins, Shakes und Bowls – alle berechnet, alle ohne zugesetzten Zucker. Das Rezeptbuch ist der ultimative Guide für deine Geschmacksbombe.
+              Kuchen, Muffins, Shakes und Bowls – alle berechnet, alle ohne zugesetzten Zucker. Im Rezeptbuch ist alles drin, was du brauchst, um loszulegen.
             </p>
             
             <button onClick={scrollToCheckout} className="btn-primary !bg-white !text-jet-black hover:!bg-burnt-peach hover:!text-white border-2 border-transparent">
