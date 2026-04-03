@@ -456,18 +456,24 @@ export default function ProductSelector() {
                     return (
                       <button
                         key={flavor.id}
-                        onClick={() => handleAddFlavor(flavor)}
-                        disabled={missingCount === 0}
-                        className={`border rounded-xl bg-white hover:border-burnt-peach hover:shadow-md transition-all flex flex-col text-left group overflow-hidden relative ${justAdded === flavor.id ? 'border-burnt-peach' : 'border-powder-blue'}`}
+                        onClick={() => !flavor.soldOut && handleAddFlavor(flavor)}
+                        disabled={missingCount === 0 || flavor.soldOut}
+                        className={`border rounded-xl bg-white transition-all flex flex-col text-left overflow-hidden relative
+                          ${flavor.soldOut ? 'opacity-50 cursor-not-allowed border-powder-blue' : `hover:border-burnt-peach hover:shadow-md group ${justAdded === flavor.id ? 'border-burnt-peach' : 'border-powder-blue'}`}`}
                       >
                         <div className="w-full aspect-[5/2] overflow-hidden relative">
                           <img
                             src={flavor.ingredientImage}
                             alt={name}
-                            className="w-full h-full object-cover scale-150"
+                            className={`w-full h-full object-cover scale-150 ${flavor.soldOut ? 'grayscale' : ''}`}
                             loading="lazy"
                             decoding="async"
                           />
+                          {flavor.soldOut && (
+                            <div className="absolute inset-0 bg-white/60 flex items-center justify-center">
+                              <span className="text-[9px] font-sans font-bold uppercase tracking-widest text-dusk-blue bg-white/90 px-1.5 py-0.5 rounded">Ausverkauft</span>
+                            </div>
+                          )}
                           {justAdded === flavor.id && (
                             <div className="absolute inset-0 bg-burnt-peach/30 flex items-center justify-center">
                               <div className="bg-white rounded-full p-1 shadow-md">
@@ -477,7 +483,7 @@ export default function ProductSelector() {
                           )}
                         </div>
                         <div className="px-2.5 py-2">
-                          <span className={`text-[12px] font-sans font-bold text-jet-black leading-tight block transition-colors ${justAdded === flavor.id ? 'text-burnt-peach' : ''}`}>{name}</span>
+                          <span className={`text-[12px] font-sans font-bold leading-tight block transition-colors ${flavor.soldOut ? 'text-dusk-blue' : justAdded === flavor.id ? 'text-burnt-peach' : 'text-jet-black'}`}>{name}</span>
                         </div>
                       </button>
                     )

@@ -74,7 +74,7 @@ export const productData = {
     }
   ],
   flavors: [
-    { name: "🫐 Blaubeer-Käsekuchen", id: "50647839310088", image: "bilder/blaubeer.png", ingredientImage: "flavors/blaubeer-kaesekuchen.webp" },
+    { name: "🫐 Blaubeer-Käsekuchen", id: "50647839310088", image: "bilder/blaubeer.png", ingredientImage: "flavors/blaubeer-kaesekuchen.webp", soldOut: true },
     { name: "🍎 Apfel-Zimt", id: "39608308269139", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/9_89573c2d-9cba-45d6-b909-213e03bb875c.png?v=1737585945", ingredientImage: "flavors/apfel-zimt.webp" },
     { name: "🍌 Bananensplit", id: "39608308236371", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/8_9985277f-89f1-4ec1-859b-ceaede9bca14.png?v=1737585945", ingredientImage: "flavors/bananensplit.webp" },
     { name: "🍪 Butterkeks", id: "39608308301907", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/10_5ec2c3d9-4e4c-4a8f-9168-c33a14735feb.png?v=1737585945", ingredientImage: "flavors/butterkeks.webp" },
