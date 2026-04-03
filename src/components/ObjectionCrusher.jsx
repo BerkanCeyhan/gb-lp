@@ -19,7 +19,7 @@ export default function ObjectionCrusher() {
   const objections = [
     {
       q: "Schmeckt das wirklich – oder nur im Vergleich zu nichts?",
-      a: "Wir kennen die Enttäuschung von 'gesunden' Snacks, die nach Pappe schmecken. Die Geschmacksbombe ist anders. Sie liefert ein volles, cremiges und intensiv süßes Geschmackserlebnis ohne künstlichen Nachgeschmack. Und falls es dir doch nicht schmeckt? Dann greift unsere „Liebe auf den ersten Löffel“ Garantie."
+      a: "Sagen wir es so: 94% unserer Kundinnen bestellen nach. Nicht weil sie gesund sein wollen – sondern weil ihr Quark ohne Geschmacksbombe jetzt langweilig schmeckt."
     },
     {
       q: "Sind Süßstoffe wie Sucralose nicht ungesund?",

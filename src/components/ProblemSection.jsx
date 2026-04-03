@@ -51,7 +51,7 @@ export default function ProblemSection() {
         <div className="text-center max-w-3xl mx-auto mb-16 problem-intro">
           <span className="label-text-peach mb-4 block">KOMMT DIR DAS BEKANNT VOR?</span>
           <h2 className="section-headline mb-6">
-            Deine Diät scheitert nicht an deiner Disziplin. Sie scheitert an fehlendem Genuss.
+            Du hast genug Disziplin. Was dir fehlt, ist Essen, auf das du dich tatsächlich freust.
           </h2>
           <p className="body-text">
             Du weißt genau, was du essen solltest. Du hast die Rezepte. Du kaufst die richtigen Lebensmittel. Aber die Realität in deiner Küche sieht anders aus.
@@ -99,7 +99,7 @@ export default function ProblemSection() {
             <div className="space-y-3">
               {[
                 { num: "01", label: "Du startest motiviert. Wieder.", sub: "«Diesmal halte ich durch.»", accent: false },
-                { num: "02", label: "Fade Mahlzeiten. Kein Genuss.", sub: "Essen fühlt sich wie Strafe an — nicht wie Leben.", accent: false },
+                { num: "02", label: "Montag: Quark. Dienstag: Quark.", sub: "Mittwoch: Du starrst den Quark an und überlegst, ob Pizza nicht doch okay wäre.", accent: false },
                 { num: "03", label: "Heißhunger schlägt zu.", sub: "Dein Körper schreit nach echtem Geschmack.", accent: true },
                 { num: "04", label: "Aufgeben. Wieder.", sub: "Schuld. Frust. «Ich schaff das einfach nicht.»", accent: true },
               ].map((step, i) => (
