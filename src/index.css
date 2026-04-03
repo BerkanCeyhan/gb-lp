@@ -85,3 +85,14 @@
   animation: flavorEntrance 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   display: inline-block;
 }
+/* Image placeholder + fade-in */
+img {
+  background-color: rgba(186, 213, 225, 0.25);
+}
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+img[loading="lazy"].img-loaded {
+  opacity: 1;
+}

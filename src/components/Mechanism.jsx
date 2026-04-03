@@ -90,7 +90,7 @@ export default function Mechanism() {
                 Inulin ist ein natürlicher, pflanzlicher Ballaststoff. Es gibt dem Pulver sein Volumen und sorgt für diese unvergleichlich cremige Textur im Quark – ganz ohne Kalorien oder Kohlenhydrate beizusteuern.
               </p>
               <div className="ml-0 sm:ml-8 w-full max-w-sm aspect-[5/2] overflow-hidden rounded-xl bg-light-cyan-alt border border-powder-blue">
-                <img src="bilder/chicoree.jpg" alt="Chicorée Wurzel" className="w-full h-full object-cover opacity-90" loading="lazy" decoding="async" />
+                <img src="bilder/chicoree.webp" alt="Chicorée Wurzel" className="w-full h-full object-cover opacity-90" loading="lazy" decoding="async" />
               </div>
             </div>
 
@@ -103,7 +103,7 @@ export default function Mechanism() {
                 Durch eine exakt abgestimmte Mischung aus Stevioglycosiden und Sucralose erreichen wir maximale Süßkraft ohne kalorienwirksame Kohlenhydrate. Das macht die Geschmacksbombe zu 100% diabetikergeeignet.
               </p>
               <div className="ml-0 sm:ml-8 w-full max-w-sm aspect-[5/2] overflow-hidden rounded-xl bg-light-cyan-alt border border-powder-blue mb-3">
-                <img src="bilder/sucralose.jpg" alt="Süße" className="w-full h-full object-cover opacity-90" loading="lazy" decoding="async" />
+                <img src="bilder/sucralose.webp" alt="Süße" className="w-full h-full object-cover opacity-90" loading="lazy" decoding="async" />
               </div>
               <div className="ml-0 sm:ml-8 flex items-start gap-2 bg-[#E8F7F0] text-[#1B5E20] px-3 py-2 rounded-lg border border-[#A8DAB5]">
                 <span className="text-[10px] uppercase font-sans font-bold tracking-widest pt-0.5">Wichtig:</span>
@@ -120,7 +120,7 @@ export default function Mechanism() {
                 Im Gegensatz zu vielen Alternativen verliert das Pulver beim Backen nicht an Geschmack. Kombiniere es mit den 47 Rezepten aus unserem beiliegenden Rezeptbuch (109 Seiten) für perfekte Kuchen, Pancakes und Bowls.
               </p>
               <div className="ml-0 sm:ml-8 w-full max-w-sm aspect-[5/2] overflow-hidden rounded-xl bg-light-cyan-alt border border-powder-blue">
-                <img src="bilder/backen.jpg" alt="Backen" className="w-full h-full object-cover opacity-90" loading="lazy" decoding="async" />
+                <img src="bilder/backen.webp" alt="Backen" className="w-full h-full object-cover opacity-90" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>

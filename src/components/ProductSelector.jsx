@@ -461,13 +461,14 @@ export default function ProductSelector() {
                         className={`border rounded-xl bg-white transition-all flex flex-col text-left overflow-hidden relative
                           ${flavor.soldOut ? 'opacity-50 cursor-not-allowed border-powder-blue' : `hover:border-burnt-peach hover:shadow-md group ${justAdded === flavor.id ? 'border-burnt-peach' : 'border-powder-blue'}`}`}
                       >
-                        <div className="w-full aspect-[5/2] overflow-hidden relative">
+                        <div className="w-full aspect-[5/2] overflow-hidden relative bg-powder-blue/20">
                           <img
                             src={flavor.ingredientImage}
                             alt={name}
-                            className={`w-full h-full object-cover scale-150 ${flavor.soldOut ? 'grayscale' : ''}`}
-                            loading="lazy"
+                            className={`w-full h-full object-cover scale-125 transition-opacity duration-300 opacity-0 ${flavor.soldOut ? 'grayscale' : ''}`}
+                            loading="eager"
                             decoding="async"
+                            onLoad={e => e.currentTarget.classList.replace('opacity-0', 'opacity-100')}
                           />
                           {flavor.soldOut && (
                             <div className="absolute inset-0 bg-white/60 flex items-center justify-center">
