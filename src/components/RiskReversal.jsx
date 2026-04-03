@@ -32,7 +32,7 @@ export default function RiskReversal() {
             </h2>
             
             <p className="body-text text-lg max-w-2xl mx-auto mb-8 risk-elem">
-              Wir versprechen dir kein Marketing-Blabla, sondern ein echtes Geschmackserlebnis. Teste die Geschmacksbombe in deinem eigenen Quark oder Kuchen. Wenn es dich beim ersten Löffel nicht umhaut, bekommst du dein Geld zurück. Ohne Wenn und Aber.
+              Wir versprechen dir kein Marketing-Blabla, sondern ein echtes Geschmackserlebnis. Teste die Geschmacksbombe in deinem eigenen Quark oder Kuchen. Wenn es dich beim ersten Löffel nicht umhaut, melden wir uns persönlich – und finden gemeinsam die Sorte, die dich vom Hocker reißt.
             </p>
             
             <div className="font-condensed font-extrabold text-[#34A853] uppercase tracking-widest text-sm risk-elem">

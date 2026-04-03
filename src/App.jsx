@@ -14,18 +14,21 @@ import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import MobileCTABar from './components/MobileCTABar';
 
+const isV2 = import.meta.env.VITE_VERSION === '2';
+
 function App() {
   return (
     <main className="relative overflow-x-hidden">
       <Navbar />
       <Hero />
+      {isV2 && <ProductSelector />}
       <AhaMoment />
       <ProblemSection />
       <FailedSolutions />
       <Mechanism />
       <SocialProof />
       <RecipeSection />
-      <ProductSelector />
+      {!isV2 && <ProductSelector />}
       <ObjectionCrusher />
       <RiskReversal />
       <FinalCTA />

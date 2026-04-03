@@ -7,8 +7,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
+    "build:v1": "VITE_VERSION=1 vite build",
+    "build:v2": "VITE_VERSION=2 vite build",
     "deploy": "gh-pages -d dist",
+    "deploy:v1": "npm run build:v1 && gh-pages -d dist --dest gb/1",
+    "deploy:v2": "npm run build:v2 && gh-pages -d dist --dest gb/2",
+    "deploy:all": "npm run deploy:v1 && npm run deploy:v2",
     "lint": "eslint .",
     "preview": "vite preview"
   },
