@@ -93,3 +93,15 @@ img[loading="lazy"] {
 img[loading="lazy"].img-loaded {
   opacity: 1;
 }
+
+/* Animated underline draw */
+.underline-draw {
+  background-image: linear-gradient(#EE6C4D, #EE6C4D);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1.5px;
+  animation: underlineDraw 1s ease forwards 0.8s;
+}
+@keyframes underlineDraw {
+  to { background-size: 100% 1.5px; }
+}
