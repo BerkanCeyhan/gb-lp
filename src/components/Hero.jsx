@@ -58,7 +58,7 @@ export default function Hero() {
         </p>
         
         <p className="body-text mb-10 hero-elem max-w-lg">
-          Verwandle deinen faden Magerquark, Porridge oder Skyr in Blaubeer-Käsekuchen, Schoko Kiddy oder Apfel-Zimt. Voller Geschmack bei nur 4,5 kcal pro Portion. 
+          Verwandle deinen faden <strong>Magerquark</strong>, <strong>Porridge</strong> oder <strong>Skyr</strong> in Blaubeer-Käsekuchen, Schoko Kiddy oder Apfel-Zimt – oder nutze es für deine <strong>Backrezepte</strong>. Voller Geschmack bei nur 4,5 kcal pro Portion.
         </p>
         
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-14 hero-elem">
