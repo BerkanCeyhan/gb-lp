@@ -465,7 +465,7 @@ export default function ProductSelector() {
                           <img
                             src={flavor.ingredientImage}
                             alt={name}
-                            className={`w-full h-full object-cover scale-125 transition-opacity duration-300 opacity-0 ${flavor.soldOut ? 'grayscale' : ''}`}
+                            className={`w-full h-full object-cover transition-opacity duration-300 opacity-0 ${flavor.soldOut ? 'grayscale' : ''}`}
                             loading="eager"
                             decoding="async"
                             onLoad={e => e.currentTarget.classList.replace('opacity-0', 'opacity-100')}
