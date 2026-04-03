@@ -77,7 +77,7 @@ export default function Mechanism() {
             Die meisten Ersatzprodukte setzen auf pure Süße ohne Textur.
           </p>
           <h2 className="section-headline mb-6 mech-text">
-            Das ist anders: Die Inulin-Wirkstoffmatrix.
+            Warum schmeckt das ohne Zucker sooo gut.
           </h2>
           
           <div className="space-y-8 mt-8">
@@ -87,7 +87,7 @@ export default function Mechanism() {
                 <h4 className="font-condensed font-extrabold text-xl uppercase tracking-tighter">1. Die Basis: Inulin aus der Chicorée-Wurzel</h4>
               </div>
               <p className="body-text pl-8 mb-3">
-                Inulin ist ein natürlicher, pflanzlicher Ballaststoff. Es gibt dem Pulver sein Volumen und sorgt für diese unvergleichlich cremige Textur im Quark – ganz ohne Kalorien oder Kohlenhydrate beizusteuern.
+                ...ein pflanzlicher Ballaststoff, der in vielen natürlichen Lebensmitteln steckt. Er macht deinen Quark so cremig, dass du denkst, da wäre Sahne drin. Ist aber keine.
               </p>
               <div className="ml-0 sm:ml-8 w-full max-w-sm aspect-[5/2] overflow-hidden rounded-xl bg-light-cyan-alt border border-powder-blue">
                 <img src="bilder/chicoree.webp" alt="Chicorée Wurzel" className="w-full h-full object-cover opacity-90" loading="lazy" decoding="async" />
