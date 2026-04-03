@@ -47,6 +47,7 @@ export const productData = {
       badge: "Starter",
       image: "bilder/blaubeer.png",
       qty: 2,
+      discountCode: "C2MZWZ3909BX",
       perks: ["Spare 15%", "132 Portionen"]
     },
     {
@@ -57,6 +58,7 @@ export const productData = {
       badge: "Bestseller",
       image: "bilder/blaubeer.png",
       qty: 4,
+      discountCode: "D04MCAZQSNFK",
       perks: ["Spare 38%", "+ GRATIS Rezeptbuch (PDF)"]
     },
     {
@@ -67,6 +69,7 @@ export const productData = {
       badge: "Maximaler Vorrat",
       image: "bilder/blaubeer.png",
       qty: 6,
+      discountCode: "8V2B1BDYX7NE",
       perks: ["Spare 40%", "+ GRATIS Rezeptbuch (PDF)", "+ GRATIS Classic Shaker"]
     }
   ],

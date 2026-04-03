@@ -102,7 +102,10 @@ export default function ProductSelector() {
       items.push(`${productData.bonusIds.shaker}:1`);
     }
 
-    return `https://${productData.shop}/cart/${items.join(',')}`;
+    const base = `https://${productData.shop}/cart/${items.join(',')}`;
+    return selectedPkg.discountCode
+      ? `${base}?discount=${selectedPkg.discountCode}`
+      : base;
   };
 
   const handleCheckout = () => {
