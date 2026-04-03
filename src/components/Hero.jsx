@@ -112,7 +112,8 @@ export default function Hero() {
           src="Vanille.webp"
           alt="Geschmacksbombe Dose"
           className="hero-img relative z-10 w-full max-w-[320px] md:max-w-[450px] object-contain drop-shadow-2xl rounded-2xl border border-white/10 mix-blend-lighten"
-          fetchpriority="high"
+          fetchPriority="high"
+          loading="eager"
           decoding="sync"
         />
 

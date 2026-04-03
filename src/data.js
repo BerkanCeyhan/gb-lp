@@ -2,12 +2,12 @@ export const productData = {
   shop: "brustbizeps.myshopify.com",
   productName: "Geschmacksbombe",
   productImages: [
-    "bilder/blaubeer.png",
+    "bilder/blaubeer.webp",
     "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/28.jpg?v=1737585945",
     "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/geschmackspulver-ohne-zucker_05c9e63f-a0fb-4131-83f3-49a925c2b102.webp?v=1737585945"
   ],
   bonusImages: {
-    rezeptbuch: "bilder/rezeptbuch.png",
+    rezeptbuch: "bilder/rezeptbuch.webp",
     shaker: "https://cdn.shopify.com/s/files/1/0552/2227/2083/products/LIPO100_4.png?v=1737068220"
   },
   bonusIds: {
@@ -22,7 +22,7 @@ export const productData = {
       price: "24.90",
       compareAtPrice: null,
       badge: "Risikofrei testen",
-      image: "bilder/probe_5.png",
+      image: "bilder/probe_5.webp",
       qty: 1,
       isProbeset: true,
       perks: ["5 Top-Geschmäcker", "Über 70 Portionen", "Versandkostenfrei"]
@@ -34,7 +34,7 @@ export const productData = {
       price: "34.90",
       compareAtPrice: null,
       badge: "Beste Vielfalt",
-      image: "bilder/probe.png",
+      image: "bilder/probe.webp",
       qty: 1,
       isProbeset: true,
       perks: ["9 Top-Geschmäcker", "Über 120 Portionen", "Versandkostenfrei"]
@@ -45,7 +45,7 @@ export const productData = {
       price: "29.95",
       compareAtPrice: "31.80",
       badge: "Starter",
-      image: "bilder/blaubeer.png",
+      image: "bilder/blaubeer.webp",
       qty: 2,
       discountCode: "C2MZWZ3909BX",
       perks: ["Spare 15%", "132 Portionen"]
@@ -56,7 +56,7 @@ export const productData = {
       price: "54.79",
       compareAtPrice: "88.55",
       badge: "Bestseller",
-      image: "bilder/blaubeer.png",
+      image: "bilder/blaubeer.webp",
       qty: 4,
       discountCode: "D04MCAZQSNFK",
       perks: ["Spare 38%", "+ GRATIS Rezeptbuch (PDF)"]
@@ -67,7 +67,7 @@ export const productData = {
       price: "89.40",
       compareAtPrice: "125.25",
       badge: "Maximaler Vorrat",
-      image: "bilder/blaubeer.png",
+      image: "bilder/blaubeer.webp",
       qty: 6,
       discountCode: "8V2B1BDYX7NE",
       perks: ["Spare 40%", "+ GRATIS Rezeptbuch (PDF)", "+ GRATIS Classic Shaker"]
@@ -82,10 +82,10 @@ export const productData = {
     { name: "🥜 Erdnuss Karamell", id: "43528511553800", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/16_0a016ec6-eea4-49fc-add3-6cdc271e0734.png?v=1737585945", ingredientImage: "flavors/erdnuss-karamell.webp" },
     { name: "🌰 Haselnuss", id: "39608308367443", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/12_8a3c0be0-008d-4cde-9f48-3f24095a3d58.png?v=1737585945", ingredientImage: "flavors/haselnuss.webp" },
     { name: "💋 Himbeere", id: "43528504082696", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/18_51640b51-5ad6-43c5-85c8-9f7645335521.png?v=1737585945", ingredientImage: "flavors/himbeere.webp" },
-    { name: "🍒 Kirsch-Wunder", id: "50647839342856", image: "bilder/Kirschwunder.png", ingredientImage: "flavors/kirsch-wunder.webp" },
+    { name: "🍒 Kirsch-Wunder", id: "50647839342856", image: "bilder/Kirschwunder.webp", ingredientImage: "flavors/kirsch-wunder.webp" },
     { name: "🍫 Schoko Kiddy", id: "39608308432979", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/15_cf91033d-7577-46fc-b3b4-7a4bacd97ff1.png?v=1737497782", ingredientImage: "flavors/schoko-kiddy.webp" },
     { name: "☕️ Tiramisu", id: "39608308498515", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/19_ed634019-9ca6-411b-99f6-3e39ee6d2c24.png?v=1737497782", ingredientImage: "flavors/tiramisu.webp" },
-    { name: "🍨 Vanille", id: "43528505590024", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/17_3851e7df-91fe-4e2d-b884-7e420123e3f7_1.png?v=1737497782", ingredientImage: "flavors/vanille.png" }
+    { name: "🍨 Vanille", id: "43528505590024", image: "https://cdn.shopify.com/s/files/1/0552/2227/2083/files/17_3851e7df-91fe-4e2d-b884-7e420123e3f7_1.png?v=1737497782", ingredientImage: "flavors/vanille.webp" }
   ]
 };
 
@@ -96,7 +96,7 @@ export const reviews = [
     text: "Absolut köstlich und aus meiner Küche nicht mehr wegzudenken. Ist hier nahezu täglich im Einsatz und zwar nicht nur um den ollen Magerquark aufzupeppen, sondern auch ein absolutes Allround Talent, wenn es darum geht, geniale Rezepte in einer kalorienarme und zuckerfreien Variante zu machen. Egal ob Apfelkuchen mit Apfel, Zimt Waffeln mit Schoko Kiddy oder köstliches Frucht Tiramisu mit Erdbeerwunder oder Himbeere ich liebe alle Sorten und würde jederzeit alle wieder in meinem Sortiment haben wollen.",
     rating: 5,
     verified: true,
-    image: "bilder/review_baking.jpg"
+    image: "bilder/review_baking.webp"
   },
   {
     name: "Cecilia K.",
@@ -104,7 +104,7 @@ export const reviews = [
     text: "Die Geschmacksbombe ist im Gegensatz zu anderen Zuckeralternativen viel besser und Kalorienärmer. Ich mache es immer in meinen Magerquark und meinen Kaffee. Das beste ist, dass es nicht nach Süßstoff schmeckt, denn das mag ich bei anderen Alternativen gar nicht. Absolute 5 von 5 !!",
     rating: 5,
     verified: true,
-    image: "bilder/kundin_review.jpg"
+    image: "bilder/kundin_review.webp"
   },
   {
     name: "Christian B.",
@@ -112,6 +112,6 @@ export const reviews = [
     text: "Magerquark mit Nüssen, Früchten Kokosscheiben etc. - Nie wieder ohne Geschmacksbombe!!! Und nicht nur im Magerquark unschlagbar. Ich liebe es. Seid nur vorsichtig mit der Dosierung: Das Pulver ist sehr intensiv/ergiebig.",
     rating: 5,
     verified: true,
-    image: "bilder/review_3.jpg"
+    image: "bilder/review_3.webp"
   }
 ];

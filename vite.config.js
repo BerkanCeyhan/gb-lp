@@ -1,12 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import viteCompression from 'vite-plugin-compression'
 
 const version = process.env.VITE_VERSION || '';
 const base = version ? `/gb/${version}/` : '/';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    viteCompression({ algorithm: 'gzip', ext: '.gz' }),
+    viteCompression({ algorithm: 'brotliCompress', ext: '.br' }),
+  ],
   base,
   build: {
     rollupOptions: {
